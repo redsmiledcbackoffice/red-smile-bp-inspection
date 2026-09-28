@@ -5,7 +5,7 @@ import { createClient } from '@/lib/supabaseClient'
 import { SECTIONS } from '@/lib/sections'
 import Nav from '@/components/Nav'
 
-const CLINIC_NAME = 'คลินิกทันตกรรมเรดสไมล์ สาขาราชบุรี'
+const CLINIC_NAME = 'คลินิกทันตกรรมเรดสไมล์ สาขาบางปู'
 
 type ItemState = { status: '' | 'เรียบร้อย' | 'ไม่เรียบร้อย'; note: string; fixer: string }
 

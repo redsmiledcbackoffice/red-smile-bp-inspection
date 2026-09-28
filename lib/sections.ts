@@ -27,8 +27,7 @@ const frontItems = ['หน้าร้านสะอาด มีการก�
 export const SECTIONS: Section[] = [
   { key: 'room1', title: 'ห้องตรวจทันตกรรม 1 (ROOM 1)', items: roomItems, doctor: true, caretaker: true },
   { key: 'room2', title: 'ห้องตรวจทันตกรรม 2 (ROOM 2)', items: roomItems, doctor: true, caretaker: true },
-  { key: 'room3', title: 'ห้องตรวจทันตกรรม 3 (ROOM 3)', items: roomItems, doctor: true, caretaker: true },
-  { key: 'room4', title: 'ห้องตรวจทันตกรรม 4 (ROOM 4)', items: roomItems, doctor: true, caretaker: true },
+  { key: 'room3', title: 'ห้องตรวจทันตกรรม 3 (ROOM 3)', items: roomItems, doctor: true, caretaker: true },,
   { key: 'xray', title: 'ห้องเอกซเรย์ (X-RAY ROOM)', items: xrayItems, caretaker: true },
   { key: 'supply', title: 'ห้องซัพพลาย (SUPPLY ROOM)', items: supplyItems, caretaker: true },
   { key: 'front', title: 'พื้นที่บริเวณหน้าร้าน', items: frontItems },
