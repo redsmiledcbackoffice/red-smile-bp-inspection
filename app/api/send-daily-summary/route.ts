@@ -157,7 +157,9 @@ export async function POST(req: Request) {
         { name: '🌙 รอบเย็น', value: `**${eText}**`, inline: true },
         { name: '\u200b', value: '----------------------------------------', inline: false },
         { name: '⚠️ รายการค้างแก้ไข ณ วันนี้', value: issueText, inline: false },
+        {name: '\u200b', value: '🔗 [คลิกที่นี่เพื่อดูรายละเอียดบนเว็บ](https://red-smile-bp-inspection.vercel.app/dashboard)', inline: false }
       ],
+        
       timestamp: new Date().toISOString(),
     }
 
@@ -166,20 +168,7 @@ export async function POST(req: Request) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
-        embeds: [embed],
-        components: [
-          {
-            type: 1, // Action Row (แถววางปุ่ม)
-            components: [
-              {
-                type: 2, // Button
-                style: 5, // Link Button (ปุ่มเปิดเว็บ)
-                label: '🔍 ดูรายละเอียดบนเว็บ',
-                url: 'https://red-smile-bp-inspection.vercel.app/dashboard',
-              },
-            ],
-          },
-        ],
+        embeds: [embed]
       }),
     })
 
