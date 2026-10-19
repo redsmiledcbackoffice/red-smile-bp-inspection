@@ -150,7 +150,7 @@ export async function POST(req: Request) {
 
     const embed = {
       title: `🏥 สรุปตรวจความเรียบร้อยประจำวัน`,
-      description: `**สาขาบางปู** — 🗓️ วันที่ ${date}`,
+      description: `**Red Smile สาขาบางปู** — 🗓️ วันที่ ${date}`,
       color: 0xa5293c,
       fields: [
         { name: '☀️ รอบเช้า', value: `**${mText}**`, inline: true },
