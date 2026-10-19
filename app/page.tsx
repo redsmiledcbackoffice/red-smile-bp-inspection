@@ -111,6 +111,21 @@ export default function FormPage() {
     }
 
     setMessage('บันทึกผลตรวจเรียบร้อย ✓')
+    
+    /*fetch('/api/notify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        clinicName: CLINIC_NAME,
+        period,
+        inspector,
+        score,
+        okItems,
+        totalItems,
+        date,
+      }),
+    }).catch((e) => console.error('Failed to send Discord notification:', e))
+*/
     setSectionState(freshSectionState())
     setInspector('')
   }
@@ -267,7 +282,7 @@ export default function FormPage() {
           <div
             className={`p-4 mb-4 rounded-xl text-center text-sm font-semibold flex items-denter justify-center gap-2 transition-all ${
               message.includes('เรียบร้อย')
-                ?'ng-emerald-100 border border-emerald-300 text-emerald-800 shadow-sm'
+                ?'bg-emerald-100 border border-emerald-300 text-emerald-800 shadow-sm'
                 : 'bg-rose-100 border border-rose-300 text-rose-800 shadow-sm'
             }`}
             >
