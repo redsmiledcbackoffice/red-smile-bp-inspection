@@ -165,7 +165,22 @@ export async function POST(req: Request) {
     const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ embeds: [embed] }),
+      body: JSON.stringify({ 
+        embeds: [embed],
+        components: [
+          {
+            type: 1, // Action Row (แถววางปุ่ม)
+            components: [
+              {
+                type: 2, // Button
+                style: 5, // Link Button (ปุ่มเปิดเว็บ)
+                label: '🔍 ดูรายละเอียดบนเว็บ',
+                url: 'https://red-smile-bp-inspection.vercel.app/dashboard',
+              },
+            ],
+          },
+        ],
+      }),
     })
 
     if (!response.ok) {
